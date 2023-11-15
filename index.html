@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.8986bff4.css">
+<script src="/styles.8986bff4.js"></script></head>
+
+<body class="dark-theme">
+  <div class="toolbar">
+    <!-- Розмітка перемикача теми -->
+    <div class="theme-switch">
+      <svg class="theme-switch__icon" role="img" aria-label="Іконка сонця">
+        <use href="/sprite.5ec50489.svg#sun"></use>
+      </svg>
+
+      <div class="theme-switch__control">
+        <input class="theme-switch__toggle" type="checkbox" onclick="" name="theme" id="theme-switch-toggle" aria-label="Перемикаж між темню та світлою темою">
+        <label aria-hidden="true" class="theme-switch__track" for="theme-switch-toggle">
+        </label>
+        <div aria-hidden="true" class="theme-switch__marker"></div>
+      </div>
+
+      <svg class="theme-switch__icon" aria-label="Іконка місяця">
+        <use href="/sprite.5ec50489.svg#moon"></use>
+      </svg>
+    </div>
+  </div>
+
+  <!-- В цей список рендери розмітку меню -->
+  <ul class="menu js-menu" id="list">
+
+  </ul>
+  <script type="text/x-handlebars-template" id="template">
+             {{#each dishes}}
+            <li class="card">
+              <div class="card__content">
+                <img src="{{image}}" alt="" class="card__image">
+                <h1 class="card__name">{{name}}</h1>
+                <h3 class="card__price">
+                    <span class="material-symbols-outlined">
+                      paid
+                  </span>
+                  <p>{{price}} кредитів</p>
+                </h3>
+                <p class="card__descr">
+                  {{description}}
+                </p>
+                <div class="tag__list">
+                  {{#each ingredients}}
+                  <div class="tag-list__item">
+                    {{this}}
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+              <div class="button">
+                <span class="button__icon material-symbols-outlined">
+                  shopping_cart
+                </span>
+                <p>В корзину</p>
+              </div>
+            </li>
+             {{/each}}
+          </script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="/handlebars.1ca0ba82.js"></script>
+  <script src="/theme.df83bf8f.js"></script>
+</body>
+
+</html>
